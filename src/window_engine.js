@@ -1,4 +1,5 @@
-
+require('./window_engine.css')
+require('../index.html')
 const protoCall = x => (y,z)=> Array.prototype[x].call(z,y)
 // const getElementsByClass = x => document.getElementsByClassName(x)
 
@@ -9,6 +10,8 @@ const reduceCollection = (fn,x) => protoCall('reduce')(fn,x)
 const windowActivators = document.getElementsByClassName('window-activator')
 const windowTargets = document.getElementsByClassName('target')
 const closeButtons = document.getElementsByClassName('close-btn')
+
+//io
 const hideElement = el => el.style.display = 'none'
 
 const targetContainsClass = el => cl => el.target.classList.contains(cl)
